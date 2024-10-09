@@ -1,0 +1,47 @@
+
+<!-- Modal -->
+<div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+        <div class="modal-content w-75">
+
+            <div class="pt-5">
+            <div class="text-center mb-2">     
+                <%= image_tag("https://storage.googleapis.com/heidless-ror-7-airbnb-app-5-bucket-0/images/avatar.png", size:"100x100", class:"mx-auto", alt:"site avatar") %>
+            </div>
+
+            <h2 class="h4 text-center">Registration</h2>
+            <h3 class="fs-6 fw-dark text-secondary text-center m-0">Enter your details to register</h3>
+            </div>
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Sign up</h5>
+                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <form>
+                    <!-- Name input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="name1">Name</label>
+                        <input type="text" id="name1" class="form-control" value="default-name" />
+                    </div>
+
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="email1">Email address</label> 
+                        <input type="email" id="email1" class="form-control" placeholder="default-email" value="heidlessemail05@gmail.com" />
+                    </div>
+
+                    <!-- password input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="password1">Password</label>
+                        <input type="password" id="password1" class="form-control" />
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->

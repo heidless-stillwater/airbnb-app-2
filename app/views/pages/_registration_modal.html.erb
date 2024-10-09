@@ -1,0 +1,24 @@
+
+<!-- Modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+        <div class="modal-content w-100">
+
+            <div class="flex pt-3">
+       
+                <div class="flex-none">
+                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    
+                <div class="flex-grow-1 mb-2">     
+                    <%= image_tag("https://storage.googleapis.com/heidless-ror-7-airbnb-app-5-bucket-0/images/avatar.png", size:"100x100", class:"mx-auto", alt:"site avatar") %>
+                </div>
+
+                <%= render full_details %>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Modal -->
