@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem 'devise'
 gem 'sass-rails'
 gem "ostruct", "~> 0.6.0"
+gem "geocoder", "~> 1.8"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
@@ -62,5 +63,3 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
-
-

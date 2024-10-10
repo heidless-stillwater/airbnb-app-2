@@ -7,4 +7,11 @@ class Property < ApplicationRecord
   validates :state, presence: true 
   validates :country, presence: true 
   
+  geocoded_by :address
+  after_validation :geocode
+
+  def address
+    return "301 Park Ave, New York, NY 10022, United States"
+    [street, city, state, country].compact.join(', ')
+  end
 end
