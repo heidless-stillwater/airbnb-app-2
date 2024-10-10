@@ -13,26 +13,27 @@
 #               password: "foobar"
 #             )
 
-9.times do |n|
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.create!(
-                email: email,
-                password: password,
-                password_confirmation: password
-              )
+####################
+# USERS
+# 9.times do |n|
+#   email = "example-#{n+1}@railstutorial.org"
+#   password = "password"
+#   User.create!(
+#                 email: email,
+#                 password: password,
+#                 password_confirmation: password
+#               )
+# end
+
+10.times do 
+  Property.create!(
+    name: Faker::Lorem.word, 
+    headline: Faker::Lorem.sentence, 
+    description: Faker::Lorem.paragraph,
+    address_1:Faker::Address.street_address,
+    city:Faker::Address.city,
+    state:Faker::Address.state,
+    country: "United States"
+  )
 end
 
-[
-  {
-    name: "", 
-    headline: "", 
-    description: "",
-    address_1: "",
-    address_2: "",
-    city: "",
-    state: "",
-    country: ""
-  }
-
-]

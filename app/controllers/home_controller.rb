@@ -3,8 +3,9 @@ class HomeController < ApplicationController
 
   def index
     @all_users = User.all
-    # binding.pry 
+    @all_properties = Property.all
 
+    # binding.pry 
     # flash.now[:notice] = "#{@all_users.size} users registered."
   end
 
