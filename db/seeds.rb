@@ -22,3 +22,17 @@
                 password_confirmation: password
               )
 end
+
+[
+  {
+    name: "", 
+    headline: "", 
+    description: "",
+    address_1: "",
+    address_2: "",
+    city: "",
+    state: "",
+    country: ""
+  }
+
+]
