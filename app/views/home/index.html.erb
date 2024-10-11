@@ -9,7 +9,12 @@
 </div>
 
 <section class="bg-light py-4 my-5">
-    <div class="container">
+    <div 
+      data-controller="geolocation" 
+      class="container"
+      data-latitude=""
+      data-longitude=""
+    >
         <div class="row">
             <% @all_properties.each do |property| %>
               <div class="col-md-6 col-lg-2">
