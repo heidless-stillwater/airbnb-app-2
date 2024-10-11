@@ -10,43 +10,22 @@
 
 <section class="bg-light py-4 my-5">
     <div class="container">
-        <div class="row double-column">
- 
+        <div class="row">
             <% @all_properties.each do |property| %>
-              <div class="col-md-6 col-lg-4">
+              <div class="col-md-6 col-lg-3">
                   <div class="card my-3">
                       <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg" class="card-image-top"  alt="thumbnail">
-
                       <div class="card-body">
                           <h5 class="card-title"><%= property.city %>, <%= property.state %>, <%= property.country %></h5>
                           <div class="card-details mb-1">7,333 km away</div>
                           <div class="card-details mb-1">Jun 19 - Jul 22</div>
                           <div class="card-details mb-3">$212 per night</div>
-<!--
-                          <p class="card-text">HTML stands for Hyper Text Markup Language, It helps to learn web development and designing. </p>
--->
                           <a href="#" class="btn btn-primary">Read More</a>
-
                       </div>
                   </div>
               </div>
             <% end %>
-
         </div>
     </div>
 </section>
 
-<div class="d-flex mb-5">
-  <% @all_properties.each do |property|  %>
-    <div>
-      <p><%= property.name %></p>
-      <p><%= property.headline %></p>
-      <p><%= property.description %></p>
-      <p><%= property.address_1 %></p>
-      <p><%= property.address_2 %></p>
-      <p><%= property.city %></p>
-      <p><%= property.state %></p>
-      <p><%= property.country %></p>
-    </div>
-  <% end %>
-</div>
