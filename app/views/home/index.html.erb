@@ -24,9 +24,17 @@
                           <h6 class="card-title">
                             <%= property.city %>, <%= property.state %>, <%= property.country %>
                           </h6>
+                          <div class="card-details mb-1">lat: <%= property.latitude %></div>
+                          <div class="card-details mb-1">lon: <%= property.longitude %></div>
+                          <div class="card-details mb-1">
+                            <%= 
+                              dist = Geocoder::Calculations.distance_between([property.latitude, property.longitude], [40.748433,-73.985655]) 
+                              dist.round(1)
+                            %>
+                          </div>
                           <div class="card-details mb-1">7,333 km away</div>
                           <div class="card-details mb-1">Jun 19 - Jul 22</div>
-                          <div class="card-details mb-3">$212 per night</div>
+                          <div class="card-details mb-1">$212 per night</div>
                           <a href="#" class="btn btn-primary">Read More</a>
                       </div>
                   </div>
