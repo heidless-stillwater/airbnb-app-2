@@ -3,8 +3,11 @@
 <%= render partial: 'shared/branding_modal_header' %>
 
 <div class="container mt-4 mb-5">
-  <div class="container mb-5 text-white bg-primary rounded-5 text-center" style="width:400px;">
+  <div class="container text-white bg-primary rounded-5 text-center pt-2 pb-2" style="width:350px;">
     <h4 class=""><%= @all_users.size %> users registered</h4>
+    <% @all_users.each do |user| %>
+      <h5><%= user.email  %></h5>
+    <% end %>
   </div>
 </div>
 
@@ -24,7 +27,11 @@
                           <h6 class="card-title">
                             <%= property.city %>, <%= property.state %>, <%= property.country %>
                           </h6>
-                          <div class="card-details mb-1">7,333 km away</div>
+                          <div class="card-details mb-1">latitude: <%= property.latitude %></div>
+                          <div class="card-details mb-1">longitude: <%= property.longitude %></div>
+                          <div class="card-details mb-1">
+                             <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [51.507351,-0.127758]) %> (km/mi) away
+                          </div>
                           <div class="card-details mb-1">Jun 19 - Jul 22</div>
                           <div class="card-details mb-3">$212 per night</div>
                           <a href="#" class="btn btn-primary">Read More</a>
@@ -36,3 +43,11 @@
     </div>
 </section>
 
+<section class="bg-light py-4 my-5">
+
+  <h1>google map</h1>
+  <div data-controller="google-map">
+    <div id="map" style="width:100%;height:calc(100vh - 116px);;" data-google-map-target="myMap"></div>
+  </div>
+
+</section>
