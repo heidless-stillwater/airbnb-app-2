@@ -15,8 +15,8 @@
   <div 
     data-controller="geolocation" 
     class="container"
-    data-latitude=""
-    data-longitude=""
+    data-latitude="<%= current_user&.profile&.latitude %>"
+    data-longitude="<%= current_user&.profile&.longitude %>"
   >
     <div class="row">
       <% @all_properties.each do |property| %>
@@ -31,7 +31,7 @@
               <div class="card-details mb-1">latitude: <%= property.latitude %></div>
               <div class="card-details mb-1">longitude: <%= property.longitude %></div>
               <div class="card-details mb-1">
-                  <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [51.507351,-0.127758]).round(0) %> (km/mi) away
+                  <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [current_user&.profile&.latitude,current_user&.profile&.longitude]).round(0) %> (km/mi) away
               </div>
               <div class="card-details mb-1">Jun 19 - Jul 22</div>
               <div class="card-details mb-3">$212 per night</div>
