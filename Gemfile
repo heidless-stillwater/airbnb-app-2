@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "mapkick-rb", "~> 0.1.5"
+
 gem 'devise'
 gem 'sass-rails'
 gem "ostruct", "~> 0.6.0"
