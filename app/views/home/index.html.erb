@@ -28,8 +28,6 @@
               <h6 class="card-title">
                 <%= property.city %>, <%= property.state %>, <%= property.country %>
               </h6>
-              <div class="card-details mb-1">latitude: <%= property.latitude %></div>
-              <div class="card-details mb-1">longitude: <%= property.longitude %></div>
               <div class="card-details mb-1">
                   <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [current_user&.profile&.latitude,current_user&.profile&.longitude]).round(0) %> (km/mi) away
               </div>
