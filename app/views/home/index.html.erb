@@ -29,7 +29,7 @@
                 <%= property.city %>, <%= property.state %>, <%= property.country %>
               </h6>
               <div class="card-details mb-1">
-                  <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [51.586,-0.08]).round(0) %> (km/mi) away
+                  <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [current_user&.profile&.latitude,current_user&.profile&.longitude]).round(0) %> (km/mi) away
               </div>
               <div class="card-details mb-1">Jun 19 - Jul 22</div>
               <div class="card-details mb-3">$212 per night</div>
