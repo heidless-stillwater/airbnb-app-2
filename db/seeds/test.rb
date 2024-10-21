@@ -3,7 +3,7 @@
 # USER & PROFILE
 #
 10.times do |n|
-  email = "prd_#{n+1}@bar.com"
+  email = "tst_#{n+1}@bar.com"
   password = "password"
   user = User.create!(
                 email: email,

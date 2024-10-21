@@ -43,6 +43,8 @@ ARG MASTER_KEY
 ENV RAILS_MASTER_KEY=${MASTER_KEY}
 # [END cloudrun_rails_dockerfile_key]
 
+# RUN bundle exec rails db:seed
+
 # pre-compile Rails assets with master key
 RUN bundle exec rake assets:precompile
 
