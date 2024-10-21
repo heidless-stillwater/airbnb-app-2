@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   connect() {
+    console.log("geolocation_controller triggered...")
     if (this.element.dataset.latitude && this.element.dataset.latitude) {
 
     } else {

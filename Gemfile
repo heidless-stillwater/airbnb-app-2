@@ -3,11 +3,10 @@ source "https://rubygems.org"
 gem "mapkick-rb", "~> 0.1.5"
 
 gem 'devise'
-gem 'sass-rails'
 gem "ostruct", "~> 0.6.0"
 gem "geocoder", "~> 1.8"
 gem "money-rails", "~> 1.15"
-
+gem "sassc-rails", "~> 2.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
@@ -43,7 +42,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem 'rspec-rails', '~> 7.0.0'
@@ -67,4 +66,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
+
+
 

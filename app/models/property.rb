@@ -12,6 +12,8 @@ class Property < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: -> { latitude.blank? && longitude.blank? }
 
+  has_many_attached :images
+
   def address
     [state, country].compact.join(', ')
   end

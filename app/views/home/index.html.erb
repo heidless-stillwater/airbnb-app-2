@@ -22,8 +22,8 @@
       <% @all_properties.each do |property| %>
         <div class="col-md-6 col-lg-3">
           <div class="card my-3">
+            <%= image_tag property.images.first, class:"card-image-top" %>
             <%= js_map [{latitude: property.latitude, longitude: property.longitude}], height: "200px", zoom: 6, controls: true  %>
-            <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg" class="card-image-top"  alt="thumbnail">
             <div class="card-body">
               <h6 class="card-title">
                 <%= property.city %>, <%= property.state %>, <%= property.country %>
@@ -34,8 +34,9 @@
               <div class="card-details mb-1">Jun 19 - Jul 22</div>
               <div class="card-details mb-3">
                 <span class="fw-bold">
-                  <%= humanized_money_with_symbol(property.price) %> per night
+                  <%= humanized_money_with_symbol(property.price) %>
                 </span>
+                per night
               </div>
               <a href="#" class="btn btn-primary">Read More</a>
             </div>
