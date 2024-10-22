@@ -10,5 +10,6 @@ RSpec.describe Property, type: :model do
 
   it { is_expected.to monetize(:price).allow_nil}
 
+  it { should have_many(:reviews) }
 
 end
