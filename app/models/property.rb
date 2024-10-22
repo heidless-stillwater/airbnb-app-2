@@ -24,8 +24,4 @@ class Property < ApplicationRecord
     [state, country].compact.join(', ')
   end
 
-  def average_rating
-    reviews.average(:rating)
-  end
-  
 end
