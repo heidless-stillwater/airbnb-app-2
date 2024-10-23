@@ -192,6 +192,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
+    observer (0.1.2)
     orm_adapter (0.5.0)
     ostruct (0.6.0)
     parallel (1.26.3)
@@ -199,6 +200,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.8)
+    pkg-config (1.5.6)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -256,6 +258,9 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
+    rmagick (6.0.1)
+      observer (~> 0.1)
+      pkg-config (~> 1.4)
     rspec-core (3.13.1)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.3)
@@ -394,6 +399,7 @@ DEPENDENCIES
   pry-rails (~> 0.3.11)
   puma (>= 5.0)
   rails (~> 7.2.1)
+  rmagick (~> 6.0)
   rspec-rails (~> 7.0.0)
   rubocop-rails-omakase
   sassc-rails (~> 2.1)
@@ -406,4 +412,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   2.5.11
+   2.5.9
