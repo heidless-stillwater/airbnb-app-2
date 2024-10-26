@@ -13,6 +13,11 @@
 </div>
 -->
 
+<section class="overlay">
+  <h1>Overlay a background image</h1>
+  <p>Image test..</p>
+</section>
+
 <section class="bg-light py-4 my-5">
   <div 
     data-controller="geolocation" 
@@ -24,10 +29,7 @@
       <% @all_properties.each do |property| %>
         <div class="col-md-6 col-lg-3">
           <div class="card my-3">
-            <div>
-              <%= image_tag property.images.first, class:"card-image-top" %>
-              <%= image_tag property.images.first, class:"card-image-top" %>
-            </div>
+            <%= image_tag property.images.first, class:"card-image-top" %>
             <%= js_map [{latitude: property.latitude, longitude: property.longitude}], height: "200px", zoom: 6, controls: true  %>
             <div class="card-body">
               <h6 class="card-title">
