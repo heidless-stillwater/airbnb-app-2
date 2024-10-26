@@ -1,0 +1,7 @@
+
+.overlay {
+  border-width: 10px;
+  border-style: solid;
+  border-image-source: linear-gradient(red, blue);
+  border-image-slice: 1;
+}
