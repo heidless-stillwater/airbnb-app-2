@@ -51,7 +51,6 @@ group :development, :test do
   gem "pry-rails", "~> 0.3.11"
   gem "shoulda-matchers", "~> 6.4"
 
-  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -67,4 +66,6 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
+
+gem "faker", "~> 3.5"
 
