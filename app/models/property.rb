@@ -16,6 +16,8 @@ class Property < ApplicationRecord
 
   has_many :reviews, as: :reviewable
 
+  @tst_image_int = (rand*10).round(0)
+
   def default_image
     images.first
   end

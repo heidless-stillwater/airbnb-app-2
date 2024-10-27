@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_26_191131) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_27_114530) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,6 +81,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_26_191131) do
     t.string "price_currency"
     t.integer "reviews_count"
     t.decimal "average_rating"
+    t.string "defaultImage"
     t.index ["latitude", "longitude"], name: "index_properties_on_latitude_and_longitude"
   end
 

@@ -26,12 +26,10 @@ profile = user.profile
 profile.update address_1: "99 Bd Haussmann, 75008 Paris, France", city: "Paris", state: "Île-de-France", country: "France", zip_code: "75008"
 
 
-
-
 ############
 # PROPERTIES
 #
-10.times do |i|
+12.times do |i|
   property = Property.create!(
     name: Faker::Lorem.word, 
     headline: Faker::Lorem.sentence, 
