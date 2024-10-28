@@ -1,6 +1,8 @@
 namespace :rentals do
   desc "seed properties"
   task seed_properties: :environment do
+    Property.destroy_all
+
     12.times do |i|
       property = Property.create!(
         name: Faker::Lorem.word, 
@@ -21,6 +23,7 @@ namespace :rentals do
       (1..5).to_a.sample.times do 
         Review.create(reviewable: property, rating: (1..5).to_a.sample, title: Faker::Lorem.word, body: Faker::Lorem.paragraph )
       end
+      
     end
   end
 end

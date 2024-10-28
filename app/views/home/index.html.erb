@@ -24,14 +24,16 @@
     class="container"
     data-latitude="<%= current_user&.profile&.latitude %>"
     data-longitude="<%= current_user&.profile&.longitude %>"
-  > 
+  >
     <div class="row">
       <% @all_properties.each do |property| %>
         <div class="col-md-6 col-lg-3">
           <div class="card my-3">
+          
             <% rand_index = (rand*25).round(0) %>
             <% img_url = "https://storage.cloud.google.com/heidless-pfolio-bucket-5/rental_images/property_#{rand_index}.png" %>
             <%= image_tag img_url, class:"card-image-top" %>
+
             <%= js_map [{latitude: property.latitude, longitude: property.longitude}], height: "200px", zoom: 6, controls: true  %>
             <div class="card-body">
               <h6 class="card-title">
@@ -44,14 +46,9 @@
                 </svg>
               </div>
               <div class="card-details mb-1">
-                10 Miles Away
+                  <%=Geocoder::Calculations.distance_between([property.latitude,property.longitude], [current_user&.profile&.latitude,current_user&.profile&.longitude]).round(0) %> (km/mi) away
               </div>
               <div class="card-details mb-1">Jun 19 - Jul 22</div>
-              <div class="card-details mb-1">image:
-                  <span class="fw-bold">
-                    <%= rand_index %>
-                  </span>
-              </div>
               <div class="card-details mb-3">
                 <span class="fw-bold">
                   <%= humanized_money_with_symbol(property.price) %>

@@ -25,7 +25,6 @@ user = User.create!(
 profile = user.profile
 profile.update address_1: "99 Bd Haussmann, 75008 Paris, France", city: "Paris", state: "Île-de-France", country: "France", zip_code: "75008"
 
-
 ############
 # PROPERTIES
 #
