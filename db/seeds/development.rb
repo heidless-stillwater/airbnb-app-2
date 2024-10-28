@@ -2,20 +2,20 @@
 ################
 # USER & PROFILE
 #
-1.times do |n|
-  email = "dev_#{n+1}@bar.com"
-  password = "password"
-  user = User.create!(
-                email: email,
-                password: password,
-                password_confirmation: password
-              )
-  profile = user.profile
-  profile.update address_1: "99 Bd Haussmann, 75008 Paris, France", city: "Paris", state: "Île-de-France", country: "France", zip_code: "75008"
-end
+# 1.times do |n|
+#   email = "dev_#{n+1}@bar.com"
+#   password = "password"
+#   user = User.create!(
+#                 email: email,
+#                 password: password,
+#                 password_confirmation: password
+#               )
+#   profile = user.profile
+#   profile.update address_1: "99 Bd Haussmann, 75008 Paris, France", city: "Paris", state: "Île-de-France", country: "France", zip_code: "75008"
+# end
 
 # admin username
-email = "heidlessemail05@gmail.com"
+email = "demo@heidless-app-0.com"
 password = "password"
 user = User.create!(
               email: email,

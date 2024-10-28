@@ -4,7 +4,7 @@ namespace :logins do
     User.destroy_all
 
     # admin username
-    email = "heidlessemail05@gmail.com"
+    email = "demo@heidless-app-0.com"
     password = "password"
     user = User.create!(
                   email: email,
