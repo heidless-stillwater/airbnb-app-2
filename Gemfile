@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem 'devise'
 gem 'sass-rails'
-gem "ostruct", "~> 0.6.0"
+gem "ostruct", "~> 0.6.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
