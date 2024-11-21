@@ -1,5 +1,4 @@
 
-
 <%= render partial: 'shared/branding_modal_header' %>
 
 <div class="container mt-4 mb-1">
@@ -31,7 +30,7 @@
           <div class="card my-3">
           
             <% rand_index = (rand*25).round(0) %>
-            <% img_url = "https://storage.cloud.google.com/heidless-pfolio-bucket-5/rental_images/property_#{rand_index}.png" %>
+            <% img_url = "https://storage.cloud.google.com/h-pfolio-airbnb-app-bucket-0/images/rental_images/property_#{rand_index}.png" %>
             <%= image_tag img_url, class:"card-image-top" %>
 
             <%= js_map [{latitude: property.latitude, longitude: property.longitude}], height: "200px", zoom: 6, controls: true  %>

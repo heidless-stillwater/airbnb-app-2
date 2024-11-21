@@ -2,7 +2,11 @@
 <div data-controller="form-validation" class="container mb-5 w-50">
 
   <div class="mb-5">
-    <h2>Log in</h2>  
+    <p>
+      USERNAME: demo@heidless-app-0.com<br>
+      PASSWORD: password
+    </p>
+    <h2>Log in</h2>
   </div>
   
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: ""}) do |f| %>
