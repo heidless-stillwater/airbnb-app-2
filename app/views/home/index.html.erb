@@ -30,7 +30,7 @@
           <div class="card my-3">
           
             <% rand_index = (rand*25).round(0) %>
-            <% img_url = "https://storage.cloud.google.com/h-pfolio-airbnb-app-bucket-0/images/rental_images/property_#{rand_index}.png" %>
+            <% img_url = "https://storage.cloud.google.com/h-pfolio-1-airbnb-app-bucket-0/images/rental_images/property_#{rand_index}.png" %>
             <%= image_tag img_url, class:"card-image-top" %>
 
             <%= js_map [{latitude: property.latitude, longitude: property.longitude}], height: "200px", zoom: 6, controls: true  %>
@@ -69,9 +69,12 @@
     <%= js_map [{latitude: 51.507351, longitude: -0.127758}], height: "350px", zoom: 6, controls: true %>
   </div>
 
+<!--
   <h1>google map</h1>
   <div data-controller="google-map">
     <div id="map" style="width:100%;height:calc(100vh - 116px);;" data-google-map-target="myMap"></div>
   </div>
+-->
+
 </section>
 
